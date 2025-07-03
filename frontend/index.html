@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Sharing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Secure File Sharing</h1>
+            <nav>
+                <button id="nav-home" class="active">Home</button>
+                <button id="nav-login">Login</button>
+                <button id="nav-signup">Sign Up</button>
+                <button id="nav-ops-dashboard" style="display:none;">Ops Dashboard</button>
+                <button id="nav-client-dashboard" style="display:none;">Client Dashboard</button>
+                <button id="nav-logout" style="display:none;">Logout</button>
+            </nav>
+        </header>
+
+        <main id="app-content">
+            <!-- Home Section -->
+            <section id="home-section" class="active-section">
+                <h2>Welcome!</h2>
+                <p>Please log in or sign up to use the file sharing service.</p>
+            </section>
+
+            <!-- Login / Signup Section -->
+            <section id="auth-section" class="hidden-section">
+                <h2>Login / Sign Up</h2>
+                <div class="auth-toggle">
+                    <button id="show-login" class="active-auth-btn">Login</button>
+                    <button id="show-signup">Sign Up</button>
+                </div>
+                <form id="auth-form">
+                    <input type="text" id="auth-username" placeholder="Username" required>
+                    <input type="email" id="auth-email" placeholder="Email (for Sign Up)" style="display:none;">
+                    <input type="password" id="auth-password" placeholder="Password" required>
+                    <button type="submit" id="auth-submit-btn">Login</button>
+                    <p id="auth-message" class="message"></p>
+                </form>
+            </section>
+
+            <section id="ops-dashboard-section" class="hidden-section">
+            <h2>Ops Dashboard</h2>
+    <form id="upload-form">
+        <input type="file" id="file-input" />
+        <button type="submit">Upload</button>
+        <div id="upload-message" class="message"></div>
+    </form>
+</section>
+
+
+            <!-- Client User Dashboard -->
+            <section id="client-dashboard-section" class="hidden-section">
+                <h2>Client User Dashboard</h2>
+                <h3>Available Files</h3>
+                <p id="client-message" class="message"></p>
+                <ul id="file-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
