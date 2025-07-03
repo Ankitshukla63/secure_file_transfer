@@ -1,1 +1,1 @@
-web: gunicorn backend.wsgi
+web: gunicorn secure_file_transfer.wsgi
